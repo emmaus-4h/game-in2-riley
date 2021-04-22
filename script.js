@@ -121,7 +121,7 @@ var beweegKogel = function() {
 var beweegSpeler = function() {
  if (keyCode===RIGHT && keyIsPressed){spelerX++;}
  if (keyCode===LEFT && keyIsPressed){spelerX--;}
- if (keyCode===SPACEBAR && keyIsPressed){spelerY++;}
+ 
 };
 
 
