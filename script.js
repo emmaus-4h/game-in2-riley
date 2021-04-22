@@ -21,6 +21,9 @@ const UITLEG = 0;
 const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
+const RIGHT = 39;
+const LEFT = 37;
+const SPACEBAR = 32;
 
 var spelerX = 200; // x-positie van speler
 var spelerY = 521; // y-positie van speler
@@ -116,7 +119,9 @@ var beweegKogel = function() {
  * Updatet globale variabele spelerX en spelerY
  */
 var beweegSpeler = function() {
-
+ if (keyCode===RIGHT && keyIsPressed){spelerX++;}
+ if (keyCode===LEFT && keyIsPressed){spelerX--;}
+ if (keyCode===SPACEBAR && keyIsPressed){spelerY++;}
 };
 
 
@@ -137,7 +142,7 @@ var checkVijandGeraakt = function() {
  */
 var checkSpelerGeraakt = function() {
     
-  return false;
+  return false; 
 };
 
 
