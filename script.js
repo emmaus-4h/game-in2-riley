@@ -31,8 +31,8 @@ var spelerY = 521; // y-positie van speler
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
 
-var vijandX = 0;   // x-positie van vijand
-var vijandY = 0;   // y-positie van vijand
+var vijandX = 200;   // x-positie van vijand
+var vijandY = 270;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
@@ -51,6 +51,16 @@ var score = 0; // aantal behaalde punten
 var tekenVeld = function () {
   fill(46, 46, 48);
   rect(20, 20, width - 2 * 20, height - 2 * 20);
+
+   fill(110,110,110);
+   rect(20, 20, 1240, 170 );
+
+     fill(30,30,30)
+     rect(20, 300,1240,170)
+
+      fill(46,44,77)
+      rect(20,700,1240,170)
+
 };
 
 
@@ -60,7 +70,15 @@ var tekenVeld = function () {
  * @param {number} y y-coördinaat
  */
 var tekenVijand = function(x, y) {
-    
+//* achtergrond
+    fill(46,44,77)
+    rect(x,y,120,120)
+//* wit gedeelte
+    fill(255,255,255)
+    rect(x+10,y+10,100,100)
+//* oog
+    fill(255,0,0)
+    rect(x+35,y+30,45,20)
 
 };
 
@@ -119,9 +137,9 @@ var beweegKogel = function() {
  * Updatet globale variabele spelerX en spelerY
  */
 var beweegSpeler = function() {
- if (keyCode===RIGHT && keyIsPressed){spelerX++;}
- if (keyCode===LEFT && keyIsPressed){spelerX--;}
- 
+ if (keyCode===RIGHT && keyIsPressed){spelerX+=4;}
+ if (keyCode===LEFT && keyIsPressed){spelerX-=4;}
+
 };
 
 
